@@ -6,16 +6,15 @@
     text-decoration: none;
 }
 body{
-    background-image: url("./background_img.jpeg");
+    background-image: url("../images/background-image.jpeg");
     background-size: cover;
-    height: calc(100vh - 80px);
     font-family: cursive;
     
 }
 
 .navbar{
     display: flex;
-    justify-content:flex-end;
+    justify-content:flex-start;
     align-items: center;
     color:rgb(32, 30, 30)
 }
@@ -24,7 +23,8 @@ body{
     font-size: 1.5rem;
     margin: .5rem;
     text-align: center;
-    border-bottom: #333 solid 1px;
+    background-color:#ffb74d;
+    
 }
 .navbar ul{
   margin: 0;
@@ -33,10 +33,11 @@ body{
 }
 .navbar li{
     list-style: none;
+    font-size: 1.5rem;
 }
 .navbar li a{
     text-decoration: none;
-    color: rgb(31, 29, 29);
+    color:#ff5722;
     padding: 1rem;
 }
 .navbar li:hover{
