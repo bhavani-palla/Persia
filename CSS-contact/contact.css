@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: rgb(32, 30, 30);
+}
+
+.header {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  text-align: center;
+  border-bottom: #333 solid 1px;
+}
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.navbar li {
+  list-style: none;
+}
+.navbar li a {
+  text-decoration: none;
+  color: rgb(31, 29, 29);
+  padding: 1rem;
+}
+.navbar li:hover {
+  background-color: rgb(64, 66, 66);
+}
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: rgb(22, 21, 21);
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .toggle-button {
+    display: flex;
+  }
+  .navbar {
+    display: none;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar li {
+    text-align: center;
+  }
+  .navbar li a {
+    padding: 0.5rem 1rem;
+  }
+}
+
+main {
+  grid-area: main;
+}
+aside {
+  grid-area: sb;
+}
+.section-1 {
+  grid-area: sec-1;
+}
+
+#container-1 {
+  width: 80%;
+  margin: 100px auto;
+  display: grid;
+  min-height: 600px;
+  border: 1px solid #333;
+
+
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  row-gap: 20px;
+  column-gap: 10px;
+
+  grid-template-areas:
+
+  "sec-1 sec-1 sec-1 sec-1 sec-1 sec-1 "
+    "main main main main sb sb";
+}
+.section-1 {
+  height: auto;
+  width: auto;
+  border: 1px solid black;
+  background-color: black;
+}
+
+aside {
+  min-height: 100px;
+  border: 1px solid black;
+
+}
+#map {
+    margin: 20px;
+}
+
+p,
+h2,
+h1 {
+  font-family: sans-serif;
+  color: #a2791d;
+  font-weight: 400;
+  text-align: center;
+  margin: 2%;
+ 
+  
+}
+
+main {
+  height: auto;
+  border: 1px solid black;
+  gap: 20px;
+  
+}
