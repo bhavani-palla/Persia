@@ -10,14 +10,14 @@
 .navbar {
   display: flex;
   align-items: center;
-  color: #a2791d;
+  color: #9b6f34;
 }
 
 .header {
   font-size: 1.5rem;
   margin: 0.5rem;
   text-align: center;
-  border-bottom: 1px solid #a2791d;
+  border-bottom: 1px solid#9b6f34;
 }
 .navbar ul {
   margin: 0;
@@ -29,11 +29,11 @@
 }
 .navbar li a {
   text-decoration: none;
-  color: #a2791d;
+  color:#9b6f34;
   padding: 1rem;
 }
 .navbar li:hover {
-  background-color: #a2791d;
+  background-color: #9b6f34;
 }
 .toggle-button {
   position: absolute;
@@ -48,7 +48,7 @@
 .toggle-button .bar {
   height: 3px;
   width: 100%;
-  background-color: #a2791d;
+  background-color:#9b6f34;
   border-radius: 10px;
 }
 @media (max-width: 768px) {
@@ -116,9 +116,12 @@ footer {
 }
 img {
   margin: 10px;
-  border: 3px solid #a2791d;
-  box-shadow: 3px 3px 8px 0px #a2791d;;
+  border: 3px solid #9b6f34;
+  box-shadow: 3px 3px 8px 0px #9b6f34;
   max-width: 23vw;
+}
+::placeholder{
+  color: black;
 }
 
 .sidebar-right {
@@ -128,7 +131,7 @@ justify-content: center;
   flex-wrap: wrap;
   flex-direction: column;
   height: auto;
-  border: 1px solid #a2791d;
+  border: 1px solid #9b6f34;
 }
 .sidebar-left {
   display: flex;
@@ -136,7 +139,7 @@ justify-content: center;
   flex-wrap: wrap;
   flex-direction: column;
   height: auto;
-  border: 1px solid #a2791d;
+  border: 1px solid #9b6f34;
 }
 #map {
   margin: 20px;
@@ -146,7 +149,7 @@ p,
 h2,
 h1 {
   font-family: sans-serif;
-  color: #a2791d;
+  color:#9b6f34;
   font-weight: 400;
   text-align: center;
   margin: 2%;
@@ -154,26 +157,28 @@ h1 {
 
 main {
   height: auto;
-  border: 1px solid #a2791d;
+  border: 1px solid #9b6f34;
 }
 
 #Email{
   margin: 10px 30px;
-  background-color: #a2791d;
-  height: 20px;
+  background-color: #9b6f34;
+  height: 30px;
   width: 300px;
   margin-top: 2px;
   border-radius: 2px;
-  border: 1px solid #a2791d;
+  border: 1px solid white;
+  
 }
 #Name{
   margin: 10px 30px;
-  background-color: #a2791d;
-  height: 20px;
+  background-color: #9b6f34;
+  height: 30px;
   width: 300px;
   margin-top: 2px;
   border-radius: 2px;
-  border: 1px solid #a2791d;
+  border: 1px solid white;
+  
 }
 
 
@@ -183,30 +188,33 @@ main {
   justify-content: space-between;
   margin-top: 10px;
   margin-left: 30px;
+
 }
 input[type="submit"] {
  
-  background-color: #a2791d;
+  background-color: #9b6f34;
   height: 40px;
   width: 60px;
   margin-top: 65px;
   margin-right: 80px;
   border-radius: 2;
-  border: 1px solid #a2791d;
+  border: 1px solid white;
 }
 textarea {
  
   color: black;
   width: 300px;
   height: 200px;
-  border: 1px solid #a2791d;
+  border: 1px solid white;
+  background-color:#9b6f34;
   border-radius: 2px;
   
 }
 
+
 footer {
   min-height: 150px;
-  border: 1px solid #a2791d;
+  border: 1px solid #9b6f34;
   margin-bottom: 50px;
 
   display: grid;
@@ -217,6 +225,7 @@ footer {
 [class*="box"] {
   margin: 10px;
   min-height: 100px;
+  border: 1px solid #9b6f34;
 }
 
 .box-1 {
