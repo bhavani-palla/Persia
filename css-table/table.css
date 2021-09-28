@@ -74,16 +74,6 @@
     padding: 0.5rem 1rem;
   }
 }
-.header {
-  color: #9b6f34;
-  font-size: 40px;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  text-align: center;
-  letter-spacing: 4px;
-  border-bottom: rgb(31, 23, 38) solid 1px;
-  grid-template-columns: repeat(2,1fr);
- 
-}
 
 
 .section-1{
