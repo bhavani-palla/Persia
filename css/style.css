@@ -62,6 +62,7 @@ a {
 
 .showcase h1{
     font-size: 4rem;
+    color:var(--menu-color)
 
 }
 

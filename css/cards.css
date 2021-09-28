@@ -50,7 +50,7 @@
 }
 
 .card-text p {
-    color: grey;
+    color: var(--menu-color);
     font-size: 15px;
     font-weight: 300;
 }
@@ -68,7 +68,7 @@
     justify-content: center;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    background: rgb(255, 7, 110);
+    background:var(--menu-color);
 }
 
 
