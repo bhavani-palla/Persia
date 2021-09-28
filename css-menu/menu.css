@@ -51,3 +51,54 @@
   background-color: #a2791d;
   border-radius: 10px;
 }
+
+.text1 {
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: x-large;
+}
+
+
+.text2 {
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: xx-large;
+  font-weight: bolder;
+  
+}
+
+.text3 {
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: x-large;
+
+}
+
+main,
+aside {
+  border: 1px solid #333;
+  min-height: 13.15em;
+}
+@media screen and (max-width: 1200px) {
+#container {
+  width: 89%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 2%;
+  row-gap: 1.25em;
+
+}
+main {
+  grid-column: 1 / 6;
+}
+
+aside {
+  grid-column: 6 /13;
+}
+
+}
+
