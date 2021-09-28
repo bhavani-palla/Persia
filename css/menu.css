@@ -1,165 +1,132 @@
 
 
 
-.menu-wrap {
-     /*position: fixed;*/
-     top: 0;
-     left: 0;
-     right: 0;
-     z-index: 1000;
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     background: #fff;
-     padding: 1.5rem;
-     box-shadow: 0 .5trem 1rem rgba(0, 0, 0, 1);
- }
-
-  .menu-wrap .logo { 
-      font-weight: bolder;
-      color: #666;
-  }
-
-  .menu-wrap .logo i {
-      padding-right: .5rem;
-      color: var(--red);
-  }
-
-  .menu-wrap .menu a {
-      
-      margin-left: 2rem;
-      color: #666
-  }
-
-  .menu-wrap .navbar a:hover {
-      color: var(--red);
-      transition: color 0.4s ease;
-  }
-
-
-  .menu-wrap .toggler {
-      opacity: 0;
-  }
-
-  .container {
-    max-width: 1500px;
-    margin: auto;
-    /*overflow: hidden;*/
-    padding: 0.3rem;
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color:black;
+    color: white;
 }
 
-    /** Small screen */    
 
-  @media (max-width:768px) {
 
-    /* */
-    .menu-wrap {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1;
+ 
 
-    }
+.brand-img img {
+    height: 70px;
+    width: 90px;
+}
 
-    /* Hide menu using opacity as 0 and display when toggle checkbox checked*/
-     .menu-wrap .menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: #f7f7f7;
-        border-top: .1rem solid rgba(0, 0, 0, 1);
-        opacity: 0;
-    }
+.navbar-links {
+    height: 100%;
+}
 
-    /* Style toggle checkbox with z-index 2 so it goes above hamburger and 
-        set opacity to 0 so it is not displayed on screen
-    */
-    .menu-wrap .toggler {
-        position: absolute;       
-        right: 0;
-        z-index: 2;
-        cursor: pointer;
-        width: 50px;
-        height: 50px;
-        opacity: 0;
-    
-    }
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
 
-    /* Hamburger menu with z index 1*/
-    .menu-wrap .hamburger {
-        position: absolute; 
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: var(--menu-color);
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+/* No need to display toggler checkbox for large screens - Set display none*/
+.hamburger {
+    position: absolute;
+    top: .75rem;
+    left: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.hamburger .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* No need to display toggler checkbox for large screens - set display none */
+.toggler {
+    position: absolute;;
+    width: 40px;
+    height: 31px;
+    display: none;
+}
+
+
+
+/* Navbar styles for screen width 786px and below */
+@media (max-width: 786px) {
+    .navbar {
+        flex-direction: column;
         
-        right: 0;
-        z-index: 1;
-        width: 60px;
-        height: 60px;
-        padding: 1rem;
-        background: var(--primary-color);
+    }
+
+    /* Show hamburger and set diplay flex */
+    .hamburger {
         display: flex;
-        align-items: center;
-        justify-content: center;
+        top: 1.5rem;
+        z-index: 1;
+    }
+
     
-    }
 
-    /* Add lines so it looks like hamburger*/
-    .menu-wrap .hamburger > div {
-        position: relative;
-        flex: none;
-        width: 100%;
-        height: 2px;
-        background: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.2s ease;
-    }
-
-    /* Add a line before and after so display 3 lines in hamburger */
-    .menu-wrap .hamburger > div::before,
-    .menu-wrap .hamburger > div::after {
-        content: '';
-        position: absolute;
-        z-index: 1;
-        top: -10px;
-        width: 100%;
-        height: 2px;
-        background: inherit;
-    }
-
-     .menu-wrap .hamburger > div::after {
-         top: 10px;
-     }
-
-
-     /* Rotate hamburger when toggler checkbox is checked */
-     .menu-wrap .toggler:checked + .hamburger > div {
-         transform: rotate(135deg);
-     }
-
-     /* Display cross when togger checkbox is checked */
-     .menu-wrap .toggler:checked + .hamburger > div::before,
-     .menu-wrap .toggler:checked + .hamburger > div::after
-      {
-          top: 0;
-         transform: rotate(90deg);
-     }   
-
-     /* Style menu items */
-    .menu-wrap .menu  > a {
-        margin: 1rem;
-        padding: 1rem;
-        display: block;
-        border: .1rem solid rgba(0, 0, 0, 1);
-        border-left: .5rem solid var(--red);
-        background: #fff;
-    }
    
-    /* Dispaly menu */
-    .menu-wrap .toggler:checked ~ .menu {
-        opacity: 1;
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
     }
 
-  }
+    .navbar-links ul li {
+        text-align: center;
+    }
 
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    /*
+        - Place checkbox over hamburger menu
+        - Hide checkbox for small screen by setting opacity as 0, so it is not visible
+        - Set z-index 2 so it goes over hamburger
+    */
+    .toggler {
+        display: flex;
+        top: 1.2rem;
+        left: 0.5rem;
+        z-index: 2;
+        opacity: 0;
+    }
+
+    /* Hide navbar and only display when hamburger is clicked */
+     .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    /* When toggler checkbox is checked display menu */
+     .toggler:checked ~ .navbar-links {
+        display: flex;
+    }
+
+}
 
