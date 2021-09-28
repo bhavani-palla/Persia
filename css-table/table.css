@@ -17,7 +17,7 @@
   font-size: 1.5rem;
   margin: 0.5rem;
   text-align: center;
-  border-bottom: 1px solid #a2791d;
+  border-bottom: 1px solid black;
 }
 .navbar ul {
   margin: 0;
@@ -67,6 +67,7 @@ input[type=text], select, textarea{
 input[type=datetime-local] {
   color: #a2791d;
   padding: 12px 20px;
+  width: 50%;
   border: 1px solid #a2791d; 
   border-radius: 4px;
   cursor: pointer;
@@ -91,6 +92,7 @@ input[type=submit]:hover {
 }
 
 #container {
+ 
   color: rgb(97, 63, 97);
   border-radius: 5px;
   padding: 20px;
@@ -98,6 +100,7 @@ input[type=submit]:hover {
 }
 
 .content{
+  padding-top: 20px;
   color:#a2791d;
   grid-column: 2;
   grid-row: 1;
@@ -105,7 +108,7 @@ input[type=submit]:hover {
  
   }
 .image-1{
- 
+ padding-top: 30px;
   display: grid;
   grid-template-columns: repeat(2,1fr);
   grid-template-rows: repeat(1,1fr);
@@ -136,7 +139,7 @@ input[type=submit]:hover {
 }
   
 @media (max-width: 768px) {
-  
+
   #container {
     color: rgb(97, 63, 97);
     border-radius: 5px;
@@ -151,6 +154,7 @@ input[type=submit]:hover {
    
     }
   .image-1{
+    
     display: grid;
     grid-template-columns: repeat(1,1fr);
     grid-template-rows: repeat(2,1fr);
