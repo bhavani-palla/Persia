@@ -6,7 +6,7 @@
     position: relative;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color:black;
     color: white;
 }
 
@@ -44,6 +44,7 @@
     background-color: #555;
 }
 
+/* No need to display toggler checkbox for large screens - Set display none*/
 .hamburger {
     position: absolute;
     top: .75rem;
@@ -55,14 +56,6 @@
     height: 21px;
 }
 
-.toggler {
-    position: absolute;;
-    width: 40px;
-    height: 31px;
-    display: none;
-
-}
-
 .hamburger .bar {
     height: 3px;
     width: 100%;
@@ -70,30 +63,33 @@
     border-radius: 10px;
 }
 
-@media (max-width: 800px) {
+/* No need to display toggler checkbox for large screens - set display none */
+.toggler {
+    position: absolute;;
+    width: 40px;
+    height: 31px;
+    display: none;
+}
+
+
+
+/* Navbar styles for screen width 786px and below */
+@media (max-width: 786px) {
     .navbar {
         flex-direction: column;
         
     }
 
+    /* Show hamburger and set diplay flex */
     .hamburger {
         display: flex;
         top: 1.5rem;
         z-index: 1;
     }
 
-    .toggler {
-        display: flex;
-        top: 1.2rem;
-        left: 0.5rem;
-        z-index: 2;
-        opacity: 0;
-    }
+    
 
-    .navbar-links {
-        display: none;
-        width: 100%;
-    }
+   
 
     .navbar-links ul {
         width: 100%;
@@ -108,8 +104,29 @@
         padding: .5rem 1rem;
     }
 
+    /*
+        - Place checkbox over hamburger menu
+        - Hide checkbox for small screen by setting opacity as 0, so it is not visible
+        - Set z-index 2 so it goes over hamburger
+    */
+    .toggler {
+        display: flex;
+        top: 1.2rem;
+        left: 0.5rem;
+        z-index: 2;
+        opacity: 0;
+    }
+
+    /* Hide navbar and only display when hamburger is clicked */
+     .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    /* When toggler checkbox is checked display menu */
      .toggler:checked ~ .navbar-links {
         display: flex;
     }
+
 }
 
