@@ -49,6 +49,7 @@
   }
 .image-1{
     padding-top: 60px;
+    padding-left: 40px;
     column-gap:0px;
     grid-column: 1;
     grid-row: 1;
@@ -56,6 +57,7 @@
 }
 
 .content{
+
    padding-top: 30px;
     grid-column: 2;
     grid-row: 1;
@@ -112,9 +114,10 @@ h1{
     @media (max-width: 768px) {
     h1{
         
-         font-size: 30px;
+           font-size: 30px;
            padding-top: 50px ;
            margin-left: 80px;
+           padding-left: 20px;
         }
     
 }
@@ -130,6 +133,7 @@ h1{
 }
 @media (max-width: 768px) {
 .content{
+    padding-left: 50px;
   padding-top: 30px;
     grid-column: 1;
     grid-row: 2;
