@@ -143,18 +143,17 @@
 .sidebar {
   grid-area: sb;
 }
-.box1 {
-  grid-area: box1;
+.sidebar-2 {
+  grid-area: sb2;
 }
-.box2 {
-  grid-area: box2;
+footer {
+  grid-area: ft;
 }
 
 
 .container1  {
   height: 300px;
   width: 100%;
-  border: 2px solid white;
   display: grid;
   
 
@@ -166,15 +165,16 @@
   grid-template-areas:
   "mimg mimg mimg mimg mimg mimg"
   "sec1 sec1 sec1 sec1 sec1 sec1"
-  "sb sb sb box1 box1 box1"
-  "box2 box2 box2 box2 box2 box2"
+  "sb sb sb sb2 sb2 sb2"
+  "ft ft ft ft ft ft"
 }
 
 .section-1,
 .sidebar,
-.box1,
-.box2 {
+.sidebar-2 {
   border: 1px solid white;
+  margin-left: 20px;
+  margin-right: 20px;
   
 }
 
@@ -183,7 +183,7 @@
 .img3,
 .img4 {
   margin: 10px;
-  border: 3px solid #a2791d;
+  margin-left: 17px;
   box-shadow: 3px 3px 8px 0px #9b6f34;
   max-width: 23vw;
 }
@@ -254,4 +254,38 @@ p {
   flex-wrap: wrap;
   margin-top: 10px;
   
+}
+
+footer {
+  min-height: 150px;
+  border: 1px solid #a2791d;
+  margin-bottom: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "box-1 box-2 box-3 box-4";
+}
+[class*="box"] {
+  margin: 10px;
+  min-height: 100px;
+  border: 1px solid #a2791d;
+}
+
+.box-1 {
+  grid-area: box-1;
+}
+
+.box-2 {
+  grid-area: box-2;
+}
+
+.box-3 {
+  grid-area: box-3;
+}
+
+.box-4 {
+  grid-area: box-4;
 }
