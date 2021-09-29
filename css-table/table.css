@@ -14,7 +14,6 @@
   align-items: center;
   background-color:black;
   color:#a2791d;
-  font-size: 25px;
 }
 
 
@@ -140,7 +139,6 @@
 }
 
 h1{
-  padding-top: 20px;
   color: #a2791d;
   display: flex;
   justify-content: center;
@@ -193,21 +191,8 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color:#e1bb8a; ;
 }
-
-
-
-
-.content{
-  
-  color:#a2791d;
-  grid-column: 2;
-  grid-row: 1;
-  
- 
-  }
 .image-1{
-  
-  
+
   padding-top: 90px;
   padding-left: 40px;
   display: grid;
@@ -215,6 +200,14 @@ input[type=submit]:hover {
   grid-template-rows: repeat(1,1fr);
     
 }
+
+.content{
+  
+  color:white;
+  grid-column: 2;
+  grid-row: 1;
+
+  }
 p{
   color: #a2791d;
   display: flex;
@@ -222,36 +215,27 @@ p{
 }
 @media (max-width: 768px) {
 
-  #container {
-    color: rgb(97, 63, 97);
-    border-radius: 5px;
-    padding: 20px;
-    
-  }
-  
-  .content{
-    padding-top: 50px;
-    color:#a2791d;
-    grid-column:1 ;
-    grid-row: 2;
-   
-    }
   .image-1{
-   padding-left: 40px;
+    size:250 x 250px ;
+    padding-left: 40px;
     display: grid;
     grid-template-columns: repeat(1,1fr);
     grid-template-rows: repeat(1,1fr);
     
   }
-  
+  .content{
+    padding-top: 50px;
+    color:white;
+    grid-column:1 ;
+    grid-row: 2;
+   
+    }
 }
 
 
 footer {
   min-height: 150px;
-  
   margin-top: 90px;
-  
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1;
