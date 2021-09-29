@@ -1,3 +1,5 @@
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,96 +8,250 @@
   text-decoration: none;
   background-color: black;
 }
-
 .navbar {
   display: flex;
+  position: relative;
+  justify-content: space-between;
   align-items: center;
+  background-color:black;
   color: #a2791d;
 }
 
-.header {
-  font-size: 1.5rem;
-  margin: 0.5rem;
-  text-align: center;
-  border-bottom: 1px solid black;
+
+
+
+
+.brand-img img {
+  height: 70px;
+  width: 90px;
 }
-.navbar ul {
+
+.navbar-links {
+  height: 100%;
+}
+
+.navbar-links ul {
+  display: flex;
   margin: 0;
   padding: 0;
-  display: flex;
 }
-.navbar li {
+
+.navbar-links li {
   list-style: none;
 }
-.navbar li a {
+
+.navbar-links li a {
+  display: block;
   text-decoration: none;
-  color: #a2791d;
+  color: var(--menu-color);
   padding: 1rem;
 }
-.navbar li:hover {
-  background-color: #a2791d;
+
+.navbar-links li:hover {
+  background-color: #555;
 }
-.toggle-button {
+
+/* No need to display toggler checkbox for large screens - Set display none*/
+.hamburger {
   position: absolute;
-  top: 0.75rem;
-  right: 1rem;
-  display: flex;
+  top: .75rem;
+  left: 1rem;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
-  height: 20px;
+  height: 21px;
 }
-.toggle-button .bar {
+
+.hamburger .bar {
   height: 3px;
   width: 100%;
-  background-color: #a2791d;
+  background-color: white;
   border-radius: 10px;
 }
 
-.text1 {
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-size: x-large;
+/* No need to display toggler checkbox for large screens - set display none */
+.toggler {
+  position: absolute;;
+  width: 40px;
+  height: 31px;
+  display: none;
 }
 
 
-.text2 {
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-size: xx-large;
-  font-weight: bolder;
+
+/* Navbar styles for screen width 786px and below */
+@media (max-width: 786px) {
+  .navbar {
+      flex-direction: column;
+      
+  }
+
+  /* Show hamburger and set diplay flex */
+  .hamburger {
+      display: flex;
+      top: 1.5rem;
+      z-index: 1;
+  }
+
   
+
+ 
+
+  .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+  }
+
+  .navbar-links ul li {
+      text-align: center;
+  }
+
+  .navbar-links ul li a {
+      padding: .5rem 1rem;
+  }
+
+  /*
+      - Place checkbox over hamburger menu
+      - Hide checkbox for small screen by setting opacity as 0, so it is not visible
+      - Set z-index 2 so it goes over hamburger
+  */
+  .toggler {
+      display: flex;
+      top: 1.2rem;
+      left: 0.5rem;
+      z-index: 2;
+      opacity: 0;
+  }
+
+  /* Hide navbar and only display when hamburger is clicked */
+   .navbar-links {
+      display: none;
+      width: 100%;
+  }
+
+  /* When toggler checkbox is checked display menu */
+   .toggler:checked ~ .navbar-links {
+      display: flex;
+  }
+
 }
 
-.text3 {
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-size: x-large;
-
+.section1 {
+  grid-area: sec1;
+}
+.sidebar {
+  grid-area: sb;
+}
+.box1 {
+  grid-area: box1;
+}
+.box2 {
+  grid-area: box2;
 }
 
-.item1 { grid-area: main; }
-.item2 { grid-area: right; }
 
-.grid-container {
+.container1  {
+  height: 300px;
+  width: 100%;
+  border: 2px solid white;
   display: grid;
+  
+
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  row-gap: 20px;
+  column-gap: 10px;
+
   grid-template-areas:
-    'main main main right right right';
-  grid-gap: 100px;
-  background-color: black;
-  padding: 20px;
+  "mimg mimg mimg mimg mimg mimg"
+  "sec1 sec1 sec1 sec1 sec1 sec1"
+  "sb sb sb box1 box1 box1"
+  "box2 box2 box2 box2 box2 box2"
 }
-.grid-container > div {
-  background-color: black;
-  text-align: left;
-  padding: 30px 10px;
-  font-size: 30px;
-  color: white;
+
+.section-1,
+.sidebar,
+.box1,
+.box2 {
+  border: 1px solid white;
   
 }
 
+.img1,
+.img2,
+.img3,
+.img4 {
+  margin: 10px;
+  border: 3px solid #a2791d;
+  box-shadow: 3px 3px 8px 0px #9b6f34;
+  max-width: 23vw;
+}
+
+p {
+  color:white;
+  width: 100%;
+  text-align: center;
+}
 
 
+.p2 {
+  color:#a2791d;
+  width: 100%;
+  text-align: center;
+  font-weight: bolder;
+  font-size:65px;
+
+
+}
+.p6 {
+  color:white;
+  width: 100%;
+  text-align: center;
+  font-size:50px;
+
+
+}
+
+.p3 {
+  color:#a2791d;
+  width: 100%;
+  text-align: left;
+  font-weight: bolder;
+  font-size:35px;
+  padding: auto;
+
+
+}
+
+
+.p4 {
+  color:white;
+  width: 100%;
+  text-align: left;
+  font-weight: bolder;
+  font-size:20px;
+  padding: auto;
+
+
+}
+
+.p5 {
+  color:white;
+  width: 100%;
+  text-align: left;
+  font-size:19px;
+  padding: auto;
+
+
+}
+
+
+.section-1 {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  
+}
