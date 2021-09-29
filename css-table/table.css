@@ -8,37 +8,138 @@
 }
 
 .navbar {
-  font-size: larger;
   display: flex;
+  position: relative;
+  justify-content: space-between;
   align-items: center;
-  color: #a2791d;
+  background-color:black;
+  color: white;
 }
 
-.navbar ul {
+
+
+
+
+.brand-img img {
+  margin-left: 50px;
+  margin-top: 15px;
+  height: 70px;
+  width: 90px;
+}
+
+.navbar-links {
+  height: 100%;
+}
+
+.navbar-links ul {
+  display: flex;
   margin: 0;
   padding: 0;
-  display: flex;
 }
-.navbar li {
+
+.navbar-links li {
   list-style: none;
 }
-.navbar li a {
+
+.navbar-links li a {
+  display: block;
   text-decoration: none;
-  color: #a2791d;
+  color: var(--menu-color);
   padding: 1rem;
 }
-.navbar li:hover {
-  background-color: #a2791d;
+
+.navbar-links li:hover {
+  background-color: #555;
+}
+
+/* No need to display toggler checkbox for large screens - Set display none*/
+.hamburger {
+  position: absolute;
+  top: .75rem;
+  left: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.hamburger .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+/* No need to display toggler checkbox for large screens - set display none */
+.toggler {
+  position: absolute;;
+  width: 40px;
+  height: 31px;
+  display: none;
 }
 
 
 
-.header {
+/* Navbar styles for screen width 786px and below */
+@media (max-width: 786px) {
+  .navbar {
+      flex-direction: column;
+      
+  }
 
-  margin: 0.5rem;
-  text-align: center;
-  border-bottom: 1px solid black;
+  /* Show hamburger and set diplay flex */
+  .hamburger {
+      display: flex;
+      top: 1.5rem;
+      z-index: 1;
+  }
+
+  
+
+ 
+
+  .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+  }
+
+  .navbar-links ul li {
+      text-align: center;
+  }
+
+  .navbar-links ul li a {
+      padding: .5rem 1rem;
+  }
+
+  /*
+      - Place checkbox over hamburger menu
+      - Hide checkbox for small screen by setting opacity as 0, so it is not visible
+      - Set z-index 2 so it goes over hamburger
+  */
+  .toggler {
+      display: flex;
+      top: 1.2rem;
+      left: 0.5rem;
+      z-index: 2;
+      opacity: 0;
+  }
+
+  /* Hide navbar and only display when hamburger is clicked */
+   .navbar-links {
+      display: none;
+      width: 100%;
+  }
+
+  /* When toggler checkbox is checked display menu */
+   .toggler:checked ~ .navbar-links {
+      display: flex;
+  }
+
 }
+
+
+
 
 input[type=text], select, textarea{
   color: #a2791d;
@@ -80,13 +181,12 @@ input[type=submit]:hover {
 
 #container {
  
-  color: rgb(97, 63, 97);
-  border-radius: 5px;
   padding: 20px;
   
 }
 
 .content{
+  
   padding-top: 20px;
   color:#a2791d;
   grid-column: 2;
@@ -97,55 +197,13 @@ input[type=submit]:hover {
 .image-1{
   border-radius: 30%;
   padding-top: 30px;
+  padding-left: 40px;
   display: grid;
   grid-template-columns: repeat(2,1fr);
   grid-template-rows: repeat(1,1fr);
     
 }
-@media (max-width: 768px) {
-  .toggle-button {
-    display: flex;
-  }
-  .navbar {
-    display: none;
-  }
 
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .navbar ul {
-    width: 100%;
-    flex-direction: column;
-  }
-  .navbar li {
-    text-align: center;
-  }
-  .navbar li a {
-    padding: 0.5rem 1rem;
-  }
-
-  @media (max-width: 768px) {
-  .toggle-button {
-    
-  position: absolute;
-  top: 0.75rem;
-  right: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 30px;
-  height: 20px;
-}
-.toggle-button .bar {
-  height: 3px;
-  width: 100%;
-  background-color: #a2791d;
-  border-radius: 10px;
-}
-  }
-  
 @media (max-width: 768px) {
 
   #container {
@@ -170,7 +228,7 @@ input[type=submit]:hover {
   }
   
 }
-}
+
 
 footer {
   min-height: 150px;
@@ -191,7 +249,14 @@ footer {
 .box-1 {
   grid-column: 1;
   grid-row: 1;
+  
 }
+  #instagram{
+    letter-spacing: 4px;;
+  color: #a2791d;
+  font-size: 24px;
+  }
+
 
 .box-2 {
   grid-column: 2;
