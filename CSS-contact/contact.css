@@ -12,13 +12,10 @@
   position: relative;
   justify-content: space-between;
   align-items: center;
-  background-color:black;
+  background-color: black;
   color: #a2791d;
+  font-size: 25px;
 }
-
-
-
-
 
 .brand-img img {
   height: 70px;
@@ -55,7 +52,7 @@
 /* No need to display toggler checkbox for large screens - Set display none*/
 .hamburger {
   position: absolute;
-  top: .75rem;
+  top: 0.75rem;
   left: 1rem;
   display: none;
   flex-direction: column;
@@ -73,43 +70,36 @@
 
 /* No need to display toggler checkbox for large screens - set display none */
 .toggler {
-  position: absolute;;
+  position: absolute;
   width: 40px;
   height: 31px;
   display: none;
 }
 
-
-
 /* Navbar styles for screen width 786px and below */
 @media (max-width: 786px) {
   .navbar {
-      flex-direction: column;
-      
+    flex-direction: column;
   }
 
   /* Show hamburger and set diplay flex */
   .hamburger {
-      display: flex;
-      top: 1.5rem;
-      z-index: 1;
+    display: flex;
+    top: 1.5rem;
+    z-index: 1;
   }
 
-  
-
- 
-
   .navbar-links ul {
-      width: 100%;
-      flex-direction: column;
+    width: 100%;
+    flex-direction: column;
   }
 
   .navbar-links ul li {
-      text-align: center;
+    text-align: center;
   }
 
   .navbar-links ul li a {
-      padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
   }
 
   /*
@@ -118,24 +108,23 @@
       - Set z-index 2 so it goes over hamburger
   */
   .toggler {
-      display: flex;
-      top: 1.2rem;
-      left: 0.5rem;
-      z-index: 2;
-      opacity: 0;
+    display: flex;
+    top: 1.2rem;
+    left: 0.5rem;
+    z-index: 2;
+    opacity: 0;
   }
 
   /* Hide navbar and only display when hamburger is clicked */
-   .navbar-links {
-      display: none;
-      width: 100%;
+  .navbar-links {
+    display: none;
+    width: 100%;
   }
 
   /* When toggler checkbox is checked display menu */
-   .toggler:checked ~ .navbar-links {
-      display: flex;
+  .toggler:checked ~ .navbar-links {
+    display: flex;
   }
-
 }
 
 main {
@@ -147,7 +136,7 @@ main {
 .sidebar-left {
   grid-area: sb-left;
 }
-.section-1 {
+section {
   grid-area: sec-1;
 }
 footer {
@@ -156,21 +145,21 @@ footer {
 
 #container-1 {
   width: 100%;
-  margin: 100px auto;
   display: grid;
-  height: 650px;
+  min-height: 700px;
 
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto;
   row-gap: 20px;
   column-gap: 10px;
+  margin-top: 50px;
 
   grid-template-areas:
     "sec-1 sec-1 sec-1 sec-1 sec-1 sec-1 "
     "sb-left sb-left main main sb-right sb-right"
     "ft ft ft ft ft ft";
 }
-.section-1 {
+.section {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -186,31 +175,27 @@ footer {
   box-shadow: 3px 3px 8px 0px #9b6f34;
   max-width: 23vw;
 }
-::placeholder{
+::placeholder {
   color: black;
 }
 
 .sidebar-right {
   display: flex;
-justify-content: center;
+  justify-content: center;
   align-content: center;
   flex-wrap: wrap;
   flex-direction: column;
   height: auto;
-  border: 1px solid #a2791d;
 }
 .sidebar-left {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   flex-direction: column;
   height: auto;
-  border: 1px solid #a2791d;
 }
 #map {
   margin: 20px;
 }
-
 
 h2,
 h1 {
@@ -218,12 +203,18 @@ h1 {
   color: #a2791d;
   font-weight: 400;
   text-align: center;
-  margin: 10px;
+  margin: 10px 0;
+}
+
+h3 {
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
 }
 .sb-left {
-
-margin-top: 5px;
-width:auto;
+  width: 300px;
+  margin-left: 20px;
 }
 p {
   color: white;
@@ -234,10 +225,9 @@ p {
 }
 main {
   height: auto;
-  border: 1px solid #a2791d;
 }
 
-#Email{
+#Email {
   margin: 10px 30px;
   background-color: #a2791d;
   height: 30px;
@@ -245,9 +235,8 @@ main {
   margin-top: 2px;
   border-radius: 2px;
   border: 1px solid white;
-  
 }
-#Name{
+#Name {
   margin: 10px 30px;
   background-color: #a2791d;
   height: 30px;
@@ -255,71 +244,85 @@ main {
   margin-top: 2px;
   border-radius: 2px;
   border: 1px solid white;
-  
 }
 
-
-.container-send{
-
+.container-send {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
   margin-left: 30px;
-  
-
 }
 input[type="submit"] {
- 
   background-color: #a2791d;
-  height: 60px;
+  height: 40px;
   width: 80px;
   margin-top: 80px;
-  margin-right: 30px;
+  margin-right: 130px;
   border-radius: 2;
   border: 1px solid white;
 }
 
 textarea {
- 
   color: black;
   width: 300px;
   height: 140px;
   border: 1px solid white;
-  background-color:#a2791d;
+  background-color: #a2791d;
   border-radius: 2px;
-  
 }
 
 
-footer {
-  min-height: 150px;
-  border: 1px solid #a2791d;
-  margin-bottom: 50px;
 
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
-  grid-template-areas: "box-1 box-2 box-3 box-4";
-}
-[class*="box"] {
-  margin: 10px;
-  min-height: 100px;
-  border: 1px solid #a2791d;
-}
+/* Tablet screen  */
+@media screen and (max-width: 700px) and (min-width: 500px) {
+  #container-1 {
+    width: 500px;
 
-.box-1 {
-  grid-area: box-1;
-}
+    width: 100%;
+    display: grid;
+    min-height: 700px;
 
-.box-2 {
-  grid-area: box-2;
-}
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    row-gap: 20px;
+    column-gap: 10px;
+    margin-top: 50px;
 
-.box-3 {
-  grid-area: box-3;
+    grid-template-areas:
+      "sec-1 sec-1"
+      "main main"
+      "sb-left sb-left"
+      "sb-right sb-right";
+  }
 }
 
-.box-4 {
-  grid-area: box-4;
-}
+/* Mobile screen */
+/* @media screen and (max-width: 500px) {
+    #container {
+        width: 300px;
+    }
+    /* Tablet screen  */
+@media screen and (max-width: 700px) and (min-width: 500px) {
+  #container-1 {
+    width: 500px;
 
+    width: 100%;
+    display: grid;
+    min-height: 700px;
+
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    row-gap: 20px;
+    column-gap: 10px;
+    margin-top: 50px;
+
+    grid-template-areas:
+      "sec-1"
+      "sec-1"
+      "sec-1"
+      "sec-1"
+      "main"
+      "main"
+      "sb-left"
+      "sb-right";  }
+}
