@@ -1,11 +1,4 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    text-decoration: none;
-    background-color: black;
-* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -21,6 +14,8 @@
   align-items: center;
   background-color:black;
   color:#a2791d;
+  font-size: 25px;
+
 }
 
 
@@ -144,105 +139,233 @@
   }
 
 }
-  .container-1{
-      display: grid;
-      grid-template-columns:repeat(2,1fr) ;
-      grid-template-rows: repeat(1,1fr);
-      row-gap: 10px;
-      column-gap: 20px;
+.container{
+width: 100%;
+    margin: 100px auto;
+    display: grid;
+    height: 450px;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows:repeat(1,1fr);
+    row-gap: 10px;
+    column-gap: 10px;
   }
-.image-1{
-    padding-top: 60px;
-    padding-left: 40px;
-    column-gap:0px;
-    grid-column: 1;
+
+  .image{
+    padding-left: 10%;
+    margin-top: 20px;
+    margin: 20px;
+    grid-column: 1/3;
     grid-row: 1;
-    
+      
+  }
+.main{
+  color: white;
+  grid-column: 4/6;
+  letter-spacing: 2px;
+
 }
-
-.content{
-
-   padding-top: 30px;
-    grid-column: 2;
-    grid-row: 1;
-    color: white;
-    font-size: 20px;
-    font-family:'Times New Roman', Times, serif;}
 
 h1{
-    color:  #a2791d;;
-   font-size: 30px;
-   padding-top: 50px ;
-   margin-left: 80px;
+  color: #a2791d;
+  display: flex;
+  justify-content: center;
 }
 
+
+
+
+footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 50px 100px;
+  background-color: black;
+  color: #a2791d;
+}
+footer .content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  grid-gap: 20px;
+  border: dotted goldenrod;
+}
+footer .content h2 {
+  position: relative;
+
+  font-weight: 500;
+  margin: 10px;
+}
+footer .content h2::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+}
+footer .content .aboutus p {
+  text-align: justify;
+  padding: 10px;
+}
+
+h2 {
+  text-align: center;
+}
+
+
+.followus {
+    padding: 10px;
+}
+
+.social {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  grid-gap: 10px;
+}
+.social li {
+  list-style-type: none;
+}
+.social li a {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background: goldenrod;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.social li a:hover {
+  background-color: antiquewhite;
+}
+.social li a .fa {
+  color: #fff;
+  font-size: 20px;
+}
+.contact {
+  position: relative;
+}
+.contact li {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  margin-bottom: 15px;
+}
+.contact a {
+  color: var(--menu-color);
+  text-decoration: none;
+}
+.contact a:hover {
+  color: blanchedalmond;
+}
+
+@media (max-width: 991px) {
+
+  .container{
+        height: 650px;
+        grid-template-columns: repeat(6,1fr);
+        grid-template-rows:repeat(2,1fr);
+        row-gap: 10px;
+        column-gap: 10px;
+      }
     
-
-  
-    @media (max-width: 768px) {
-        .navbar{
-            display: none;
-        }
-        .nav-flex-row{
-            flex-direction: column;
-            font-size: 20px;
-
-        }
-        .nav-flex-row li {
-            text-decoration: none;
-            list-style-type: none;
-            padding: 10px 5px;
-        }
-        .nav-flex-row li a {
-            font-family: 'Big Shoulders Text', ;
-            color: #000;
-            font-size: 24px;
-            font-weight: 200;
-        }
-
-        .header {
+      .image{
+        margin-right: 15%;
+        margin-top: 20px;
+        grid-column:2/ span2;
+        grid-row: 1;
+          
+      }
+    .main{
+      margin-right: 15%;
       
-        text-align: center;
-        letter-spacing: 4px;
-         border-bottom: black;
-  }
-        .container-1{
-            color:white;
-            display: grid;
-            text-justify:auto;
-            font-size: 18px;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-            
-        }
-    }
-    @media (max-width: 768px) {
-    h1{
-        
-           font-size: 30px;
-           padding-top: 50px ;
-           margin-left: 80px;
-           padding-left: 20px;
-        }
+      color: white;
+      grid-column: 3/6;
+      grid-row: 2;
+      letter-spacing: 2px;
     
+    }
+    h1{
+      margin-top: 10%;
+      color: #a2791d;
+      display: flex;
+      justify-content: center;
+    }
+
+  footer {
+    padding: 40px;
+  }
+  footer .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact li {
+    grid-template-columns: 1fr;
+  }
+
+  .followus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+
+
+
+
+@media (max-width: 768px) {
+
+  .container{
+    height: 350px;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows:repeat(1,1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+  }
+
+  .image{
+  display: none;
+   position: relative;
+    margin-left: 10%;
+    margin-top: 20px;
+    grid-column:1;
+    grid-row: 1;
+      
+  }
+.main{
+  margin-left: 25%;
+  color: white;
+  grid-column: 1;
+  grid-row: 1;
+  letter-spacing: 2px;
+
+}
+h1{
+  margin-top: 10%;
+  color: #a2791d;
+  display: flex;
+  justify-content: center;
 }
 
-    @media (max-width: 768px) {
-        .image-1{
-    padding-top: 60px;
-    column-gap:0px;
-    grid-column: 1;
-    grid-row: 1;
-    
+  footer .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .contact li {
+    grid-template-columns: 1fr;
+  }
+
+  .followus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
 }
-}
-@media (max-width: 768px) {
-  
-.content{
-    padding-left: 50px;
-  padding-top: 30px;
-    grid-column: 1;
-    grid-row: 2;
-    color: white;
-    font-size: 20px;
-    font-family:'Times New Roman', Times, serif;}
 }
