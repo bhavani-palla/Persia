@@ -10,10 +10,6 @@
     color: white;
 }
 
-
-
- 
-
 .brand-img img {
     height: 70px;
     width: 90px;
@@ -21,6 +17,7 @@
 
 .navbar-links {
     height: 100%;
+    font-weight:bolder;
 }
 
 .navbar-links ul {
@@ -74,7 +71,7 @@
 
 
 /* Navbar styles for screen width 786px and below */
-@media (max-width: 786px) {
+@media (max-width: 768px) {
     .navbar {
         flex-direction: column;
         

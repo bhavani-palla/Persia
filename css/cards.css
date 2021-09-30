@@ -1,7 +1,6 @@
 
 
-
-.cards {
+ .cards {
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -18,7 +17,7 @@
 
    font-family: roboto;
    border-radius: 18px;
-   background: var(--overlay-color);
+   background: black;
    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
    text-align: center;
 
@@ -95,3 +94,4 @@
         row-gap: 50px;
     }
  }
+ 

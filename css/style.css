@@ -28,14 +28,13 @@ a {
 }
 
 
-
 /* body text starts here*/
 
 
   .showcase {
     background-color: black;
     color: #fff;
-    height: 180vh;
+    /*height: 180vh;*/
     position: relative;
 
 }
