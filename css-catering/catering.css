@@ -161,8 +161,9 @@ width: 100%;
       
   }
 .main{
+  margin-left: 20px;
   color: white;
-  grid-column: 4/6;
+  grid-column: 5/7;
   letter-spacing: 2px;
 
 }
@@ -232,7 +233,7 @@ h2 {
   display: inline-block;
   width: 48px;
   height: 48px;
-  background: goldenrod;
+  background: #a2791d;
   display: grid;
   align-content: center;
   justify-content: center;
@@ -267,7 +268,7 @@ h2 {
 @media (max-width: 991px) {
 
   .container{
-      height: 650px;
+      height: 750px;
         grid-template-columns: repeat(6,1fr);
         grid-template-rows:repeat(2,1fr);
         row-gap: 10px;
@@ -283,7 +284,6 @@ h2 {
       }
     .main{
       margin-right: 15%;
-      
       color: white;
       grid-column: 3/6;
       grid-row: 2;
@@ -295,13 +295,14 @@ h2 {
       color: #a2791d;
       display: flex;
       justify-content: center;
+      padding-left: 50px;
     }
 
   footer {
     padding: auto;
   }
   .aboutus p {
-    margin-left: 15px;
+   
     color: white;
   }
   footer .content {
