@@ -4,7 +4,7 @@ footer {
   height: auto;
   padding: 50px 100px;
   background-color: black;
-  color: var(--menu-color);
+  color: #fff;
 }
 footer .content {
   width: 100%;
@@ -34,7 +34,7 @@ footer .content .aboutus p {
 
 h2 {
   text-align: center;
-  color: #fff;
+  color:var(--menu-color);
 }
 
 
@@ -81,7 +81,7 @@ h2 {
   margin-bottom: 15px;
 }
 .contact a {
-  color: var(--menu-color);
+  color: #fff;
   text-decoration: none;
 }
 .contact a:hover {
