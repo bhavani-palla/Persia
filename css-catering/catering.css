@@ -268,7 +268,7 @@ h2 {
 @media (max-width: 991px) {
 
   .container{
-      height: 650px;
+      height: 750px;
         grid-template-columns: repeat(6,1fr);
         grid-template-rows:repeat(2,1fr);
         row-gap: 10px;
@@ -284,7 +284,6 @@ h2 {
       }
     .main{
       margin-right: 15%;
-      
       color: white;
       grid-column: 3/6;
       grid-row: 2;
@@ -296,6 +295,7 @@ h2 {
       color: #a2791d;
       display: flex;
       justify-content: center;
+      padding-left: 50px;
     }
 
   footer {
