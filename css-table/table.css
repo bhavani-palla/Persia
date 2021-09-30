@@ -289,6 +289,7 @@ h2 {
   width: 48px;
   height: 48px;
   background: goldenrod;
+
   display: grid;
   align-content: center;
   justify-content: center;
