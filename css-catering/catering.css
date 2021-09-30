@@ -161,8 +161,9 @@ width: 100%;
       
   }
 .main{
+  margin-left: 20px;
   color: white;
-  grid-column: 4/6;
+  grid-column: 5/7;
   letter-spacing: 2px;
 
 }

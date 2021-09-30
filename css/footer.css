@@ -12,6 +12,7 @@ footer .content {
   grid-template-columns: 3fr 1fr 1fr;
   grid-gap: 20px;
   border: dotted goldenrod;
+  grid-template-columns: 3fr 1fr 1fr;
 }
 footer .content h2 {
   position: relative;
