@@ -275,40 +275,7 @@ input[type=submit]:hover {
     width: 70%;
   margin-left: 15%;
  }
-}
 
-footer {
-  padding: 40px;
-}
-.aboutus p {
-  color: white;
-}
-footer .content {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.contact li {
-  grid-template-columns: 1fr;
-}
-
-.followus {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-}
-
-@media (max-width: 786px) {
-
-h1{color:#a2791d;
-  display: flex;
-  justify-content: center;
-
-  padding-top: 50px;
-  padding-left: 20px;
-  
-}
   .container{
     width: 100%;
     margin: 100px auto;
@@ -352,47 +319,27 @@ h1{color:#a2791d;
  
   }
 
-  footer .content {
-    grid-template-columns: repeat(1, 1fr);
-  }
+}
  
 
-  .aboutus p {
-    color: white;
-  }
-
-}
-  .contact li {
-    color: white;
-    grid-template-columns: 1fr;
-  }
-
-  .followus {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-  }
-
-
-
-
-  footer {
+footer {
   position: relative;
   width: 100%;
   height: auto;
   padding: 50px 100px;
   background-color: black;
+  color: #a2791d;
+}
+.aboutus p {
   color: white;
 }
 footer .content {
+  
   width: 100%;
   display: grid;
   grid-template-columns: 3fr 1fr 1fr;
   grid-gap: 20px;
   border: dotted goldenrod;
-  grid-template-columns: 3fr 1fr 1fr;
 }
 footer .content h2 {
   position: relative;
@@ -412,13 +359,10 @@ footer .content .aboutus p {
   text-align: justify;
   padding: 10px;
 }
-.aboutus{
-  color:#a2791d;
-}
 
 h2 {
   text-align: center;
-  color:#a2791d;
+  ;
 }
 
 
@@ -436,6 +380,7 @@ h2 {
   list-style-type: none;
 }
 .social li a {
+  
   display: inline-block;
   width: 48px;
   height: 48px;
@@ -448,7 +393,7 @@ h2 {
   border-radius: 4px;
 }
 .social li a:hover {
-  background-color: rgb(84, 84, 84);
+  background-color: antiquewhite;
 }
 .social li a .fa {
   font-size: 20px;
@@ -459,14 +404,14 @@ h2 {
   position: relative;
 }
 .contact li {
-
+  color: white;
   text-align: center;
   display: grid;
   grid-template-columns: 30px 1fr;
   margin-bottom: 15px;
 }
 .contact a {
-  color: white;
+  color: #fff;
   text-decoration: none;
 }
 .contact a:hover {
@@ -511,5 +456,3 @@ h2 {
     padding: 10px;
   }
 }
-
-
