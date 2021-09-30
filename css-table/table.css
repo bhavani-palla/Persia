@@ -141,13 +141,20 @@
 }
 
 
+h1{color:#a2791d;
+  display: flex;
+  justify-content: center;
 
+  padding-top: 50px;
+  padding-left: 20px;
+  
+}
 
 input[type=text], select{
   display: flex;
   justify-content: flex-start;
   color: #a2791d;
-  width: 50%;
+  width: 70%;
   padding: 15px 20px; 
   border: 1px solid  #a2791d; 
   border-radius: 4px; 
@@ -161,7 +168,7 @@ input[type=datetime-local] {
   display: flex;
   justify-content: flex-start;
   color: #a2791d;
-  width: 50%;
+  width: 70%;
   padding: 15px 20px; 
   border: 1px solid  #a2791d; 
   border-radius: 4px; 
@@ -175,7 +182,7 @@ input[type=submit] {
   display: flex;
   justify-content: center;
   background-color: #a2791d;
-  width: 50%;
+  width: 70%;
   padding: 15px 20px; 
   border: 1px solid  #a2791d; 
   border-radius: 4px; 
@@ -219,19 +226,118 @@ input[type=submit]:hover {
 p{
   color: #a2791d;
   display: flex;
-  justify-content: center;
+justify-content: center;
+margin-top: 50%;
+margin-left: 20%;
+
 }
 
-@media (max-width: 786px) {
+footer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 50px 100px;
+  background-color: black;
+  color: var(--menu-color);
+}
+footer .content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  grid-gap: 20px;
+  border: dotted goldenrod;
+}
+footer .content h2 {
+  position: relative;
+
+  font-weight: 500;
+  margin: 10px;
+}
+footer .content h2::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+}
+footer .content .aboutus p {
+  text-align: justify;
+  padding: 10px;
+}
+
+h2 {
+  text-align: center;
+}
+
+
+.followus {
+    padding: 10px;
+}
+
+.social {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  grid-gap: 10px;
+}
+.social li {
+  list-style-type: none;
+}
+.social li a {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background: goldenrod;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.social li a:hover {
+  background-color: antiquewhite;
+}
+.social li a .fa {
+  color: #fff;
+  font-size: 20px;
+}
+.contact {
+  position: relative;
+}
+.contact li {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  margin-bottom: 15px;
+}
+.contact a {
+  color: var(--menu-color);
+  text-decoration: none;
+}
+.contact a:hover {
+  color: blanchedalmond;
+}
+@media (max-width: 991px) {
+
+  h1{color:#a2791d;
+    display: flex;
+    justify-content: center;
+  
+    padding-top: 50px;
+    padding-left: 20px;
+    
+  }
 
   p{
     margin-top: 10px;
+    margin-right: 70px;
   }
   .container{
     width: 100%;
     margin: 100px auto;
     display: grid;
-    height: 650px;
+    height: 950px;
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-template-rows:repeat(2,1fr);
@@ -271,5 +377,106 @@ p{
     width: 70%;
   margin-left: 15%;
  
+  }
+}
+
+
+@media (max-width: 991px) {
+  footer {
+    padding: 40px;
+  }
+  footer .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact li {
+    grid-template-columns: 1fr;
+  }
+
+  .followus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+
+}
+
+@media (max-width: 786px) {
+h1{color:#a2791d;
+  display: flex;
+  justify-content: center;
+
+  padding-top: 50px;
+  padding-left: 20px;
+  
+}
+  p{
+    margin-top: 10px;
+  }
+  .container{
+    width: 100%;
+    margin: 100px auto;
+    display: grid;
+    height: 650px;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows:repeat(2,1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+  }
+  
+  .image-1{
+    display: none;
+    padding-left: 10%;
+    margin-top: 20px;
+    grid-column: 2/6;
+    grid-row: 1;
+      
+  }
+  
+  .content{
+    padding-left: 10%;;
+    color:white;
+    grid-column:2/6 ;
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+  
+    }
+  p{
+    color: #a2791d;
+    display: flex;
+    justify-content: center;
+  }
+  input[type=text], select{
+    width: 90%;
+  }
+  input[type=datetime-local] {
+    width: 90%;
+  }
+  input[type=submit] {
+    width: 70%;
+  margin-left: 15%;
+ 
+  }
+}
+@media (max-width: 768px) {
+  footer .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .contact li {
+    grid-template-columns: 1fr;
+  }
+
+  .followus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
   }
 }
