@@ -271,36 +271,7 @@ textarea {
   border-radius: 2px;
 }
 
-footer {
-  min-height: 150px;
-  border: 1px solid #a2791d;
-  margin-bottom: 50px;
 
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
-  grid-template-areas: "box-1 box-2 box-3 box-4";
-}
-[class*="box"] {
-  margin: 10px;
-  min-height: 100px;
-}
-
-.box-1 {
-  grid-area: box-1;
-}
-
-.box-2 {
-  grid-area: box-2;
-}
-
-.box-3 {
-  grid-area: box-3;
-}
-
-.box-4 {
-  grid-area: box-4;
-}
 
 /* Tablet screen  */
 @media screen and (max-width: 700px) and (min-width: 500px) {
@@ -321,8 +292,7 @@ footer {
       "sec-1 sec-1"
       "main main"
       "sb-left sb-left"
-      "sb-right sb-right"
-      "ft ft";
+      "sb-right sb-right";
   }
 }
 
@@ -354,7 +324,5 @@ footer {
       "main"
       "main"
       "sb-left"
-      "sb-right"
-      "ft";
-  }
+      "sb-right";  }
 }
