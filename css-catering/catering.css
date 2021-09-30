@@ -232,7 +232,7 @@ h2 {
   display: inline-block;
   width: 48px;
   height: 48px;
-  background: goldenrod;
+  background: #a2791d;
   display: grid;
   align-content: center;
   justify-content: center;
@@ -301,7 +301,7 @@ h2 {
     padding: auto;
   }
   .aboutus p {
-    margin-left: 15px;
+   
     color: white;
   }
   footer .content {
