@@ -4,7 +4,7 @@ footer {
   height: auto;
   padding: 50px 100px;
   background-color: black;
-  color: var(--menu-color);
+  color: #fff;
 }
 footer .content {
   width: 100%;
@@ -12,7 +12,6 @@ footer .content {
   grid-template-columns: 3fr 1fr 1fr;
   grid-gap: 20px;
   border: dotted goldenrod;
-  grid-template-columns: 3fr 1fr 1fr;
 }
 footer .content h2 {
   position: relative;
@@ -35,7 +34,7 @@ footer .content .aboutus p {
 
 h2 {
   text-align: center;
-  color: #fff;
+  color:var(--menu-color);
 }
 
 
@@ -82,7 +81,7 @@ h2 {
   margin-bottom: 15px;
 }
 .contact a {
-  color: var(--menu-color);
+  color: #fff;
   text-decoration: none;
 }
 .contact a:hover {
