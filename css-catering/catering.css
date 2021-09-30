@@ -152,6 +152,7 @@ width: 100%;
   }
 
   .image{
+
     padding-left: 10%;
     margin-top: 20px;
     margin: 20px;
@@ -172,9 +173,6 @@ h1{
   justify-content: center;
 }
 
-
-
-
 footer {
   position: relative;
   width: 100%;
@@ -194,7 +192,7 @@ footer .content h2 {
   position: relative;
 
   font-weight: 500;
-  margin: 10px;
+  margin: 5px;
 }
 footer .content h2::before {
   content: "";
@@ -209,6 +207,9 @@ footer .content .aboutus p {
   padding: 10px;
 }
 
+.aboutus p {
+  color: white;
+}
 h2 {
   text-align: center;
 }
@@ -249,6 +250,7 @@ h2 {
   position: relative;
 }
 .contact li {
+  color: white;
   text-align: center;
   display: grid;
   grid-template-columns: 30px 1fr;
@@ -265,7 +267,7 @@ h2 {
 @media (max-width: 991px) {
 
   .container{
-        height: 650px;
+      height: 650px;
         grid-template-columns: repeat(6,1fr);
         grid-template-rows:repeat(2,1fr);
         row-gap: 10px;
@@ -296,7 +298,11 @@ h2 {
     }
 
   footer {
-    padding: 40px;
+    padding: auto;
+  }
+  .aboutus p {
+    margin-left: 15px;
+    color: white;
   }
   footer .content {
     grid-template-columns: repeat(2, 1fr);
@@ -355,8 +361,15 @@ h1{
   footer .content {
     grid-template-columns: repeat(1, 1fr);
   }
+ 
 
+  .aboutus p {
+    color: white;
+  }
+
+}
   .contact li {
+    color: white;
     grid-template-columns: 1fr;
   }
 
@@ -367,5 +380,4 @@ h1{
     justify-content: center;
     padding: 10px;
   }
-}
 }

@@ -226,32 +226,28 @@ input[type=submit]:hover {
 p{
   color: #a2791d;
   display: flex;
-justify-content: center;
-margin-top: 50%;
-margin-left: 20%;
+  justify-content: center;
+  margin-top: 20%;
+  margin-left: 20%;
 
 }
-
 footer {
   position: relative;
   width: 100%;
   height: auto;
-  padding: 50px 100px;
   background-color: black;
   color: #a2791d;
 }
 footer .content {
   width: 100%;
   display: grid;
-  grid-template-columns: 3fr 1fr 1fr;
+ 
   grid-gap: 20px;
   border: dotted goldenrod;
 }
 footer .content h2 {
   position: relative;
-
   font-weight: 500;
-  margin: 10px;
 }
 footer .content h2::before {
   content: "";
@@ -263,17 +259,18 @@ footer .content h2::before {
 }
 footer .content .aboutus p {
   text-align: justify;
-  padding: 10px;
+  
 }
 
+.aboutus p {
+  color: white;
+}
 h2 {
   text-align: center;
 }
 
 
-.followus {
-    padding: 10px;
-}
+
 
 .social {
   margin-top: 20px;
@@ -289,7 +286,6 @@ h2 {
   width: 48px;
   height: 48px;
   background: goldenrod;
-
   display: grid;
   align-content: center;
   justify-content: center;
@@ -300,13 +296,14 @@ h2 {
   background-color: antiquewhite;
 }
 .social li a .fa {
-  color: #fff;
+  color:white;
   font-size: 20px;
 }
 .contact {
   position: relative;
 }
 .contact li {
+  color: white;
   text-align: center;
   display: grid;
   grid-template-columns: 30px 1fr;
@@ -331,10 +328,6 @@ h2 {
     
   }
 
-  p{
-    margin-top: 10px;
-    margin-right: 70px;
-  }
   .container{
     width: 100%;
     margin: 100px auto;
@@ -365,6 +358,8 @@ h2 {
   
     }
   p{
+    margin-top: 10px;
+    margin-right: 70px;
     color: #a2791d;
     display: flex;
     justify-content: center;
@@ -378,16 +373,33 @@ h2 {
   input[type=submit] {
     width: 70%;
   margin-left: 15%;
- 
-  }
+ }
 }
 
+footer {
+  padding: 40px;
+}
+.aboutus p {
+  color: white;
+}
+footer .content {
+  grid-template-columns: repeat(2, 1fr);
+}
 
+.contact li {
+  grid-template-columns: 1fr;
+}
 
-
-  
+.followus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
 
 @media (max-width: 786px) {
+
 h1{color:#a2791d;
   display: flex;
   justify-content: center;
@@ -396,9 +408,6 @@ h1{color:#a2791d;
   padding-left: 20px;
   
 }
-  p{
-    margin-top: 10px;
-  }
   .container{
     width: 100%;
     margin: 100px auto;
@@ -430,7 +439,7 @@ h1{color:#a2791d;
   
     }
   p{
-    color: #a2791d;
+    color: white;
     display: flex;
     justify-content: center;
   }
@@ -445,12 +454,19 @@ h1{color:#a2791d;
   margin-left: 15%;
  
   }
-}
+
   footer .content {
     grid-template-columns: repeat(1, 1fr);
   }
+ 
 
+  .aboutus p {
+    color: white;
+  }
+
+}
   .contact li {
+    color: white;
     grid-template-columns: 1fr;
   }
 
@@ -461,3 +477,4 @@ h1{color:#a2791d;
     justify-content: center;
     padding: 10px;
   }
+
