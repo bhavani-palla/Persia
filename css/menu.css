@@ -126,4 +126,38 @@
     }
 
 }
-
+@media(max-width:1025px) and (min-width: 768px){
+    .navbar{
+        flex-direction:column;
+    }
+    .hamburger{
+        display:flex;
+        z-index: 1;
+        top:1.5rem;
+    }
+    .navbar-links ul{
+        width:100%;
+        flex-direction:column;
+        
+    }
+    .navbar-links ul li{
+        text-align: center;
+    }
+    .navbar-links ul li a{
+        padding: .5rem 1rem;
+    }
+    .toggler{
+        display:flex;
+        top:1.2rem;
+        left:0.5rem;
+        z-index:2;
+        opacity:0;
+    }
+    .navbar-links{
+        display:none;
+        width:100%;
+    }
+    .toggler:checked ~ .navbar-links{
+        display: flex;
+    }
+}
