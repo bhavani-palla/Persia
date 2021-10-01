@@ -83,6 +83,7 @@
 
 /* Navbar styles for screen width 786px and below */
 @media (max-width: 786px) {
+
   .navbar {
       flex-direction: column;
       
@@ -94,10 +95,6 @@
       top: 1.5rem;
       z-index: 1;
   }
-
-  
-
- 
 
   .navbar-links ul {
       width: 100%;
@@ -223,7 +220,6 @@ input[type=submit]:hover {
   }
 
 
-
 @media (max-width: 991px) {
 
   h1{color:#a2791d;
@@ -276,6 +272,8 @@ input[type=submit]:hover {
   margin-left: 15%;
  }
 
+}
+ @media (max-width: 768px) {
   .container{
     width: 100%;
     margin: 100px auto;
@@ -318,10 +316,7 @@ input[type=submit]:hover {
   margin-left: 15%;
  
   }
-
 }
- 
-
 footer {
   position: relative;
   width: 100%;
@@ -364,7 +359,6 @@ h2 {
   text-align: center;
   ;
 }
-
 
 .followus {
     padding: 10px;
