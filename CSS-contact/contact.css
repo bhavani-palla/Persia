@@ -6,6 +6,9 @@
   text-decoration: none;
   background-color: black;
 }
+body {
+  margin: 10px;
+}
 
 .navbar {
   display: flex;
@@ -21,7 +24,8 @@
   height: 70px;
   width: 90px;
   margin-top: 15px;
-  margin-left: 50px;
+  justify-content: center;
+  align-content: center;
 }
 
 .navbar-links {
@@ -146,7 +150,7 @@ footer {
 #container-1 {
   width: 100%;
   display: grid;
-  min-height: 700px;
+  height: 100%;
 
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto;
@@ -159,13 +163,7 @@ footer {
     "sb-left sb-left main main sb-right sb-right"
     "ft ft ft ft ft ft";
 }
-.section {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  flex-direction: row;
-  max-height: 100vh;
-}
+
 .img1,
 .img2,
 .img3,
@@ -175,17 +173,22 @@ footer {
   box-shadow: 3px 3px 8px 0px #9b6f34;
   max-width: 23vw;
 }
+.container-flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 ::placeholder {
   color: black;
 }
 
 .sidebar-right {
   display: flex;
-  justify-content: center;
   align-content: center;
   flex-wrap: wrap;
   flex-direction: column;
   height: auto;
+  width: auto;
 }
 .sidebar-left {
   display: flex;
@@ -194,6 +197,7 @@ footer {
   height: auto;
   align-items: center;
   align-content: center;
+  width: auto;
 }
 #map {
   margin: 20px;
@@ -224,9 +228,10 @@ p {
 }
 main {
   height: auto;
+  min-width: 300px;
 }
 #text {
-  color: white
+  color: white;
 }
 
 #Email {
@@ -255,6 +260,9 @@ input[type="submit"] {
   border: 1px solid white;
   color: #fff;
 }
+input[type="submit"]:hover {
+  background-color: lightgreen;
+}
 
 textarea {
   color: black;
@@ -272,7 +280,7 @@ footer {
   height: auto;
   padding: 50px 100px;
   background-color: black;
-  color:  #a2791d;
+  color: #fff;
 }
 footer .content {
   width: 100%;
@@ -283,10 +291,10 @@ footer .content {
 }
 footer .content h2 {
   position: relative;
-  color: #fff;
-  font-weight: 500;
-  margin: 10px;
+  color: #a2791d;
+  margin-top: 20px;
 }
+
 footer .content h2::before {
   content: "";
   position: absolute;
@@ -301,13 +309,12 @@ footer .content .aboutus p {
 }
 
 h2 {
+  color: #a2791d;
   text-align: center;
-  color:#a2791d
 }
 
-
 .followus {
-    padding: 10px;
+  padding: 10px;
 }
 
 .social {
@@ -353,6 +360,7 @@ h2 {
 .contact a:hover {
   color: blanchedalmond;
 }
+
 @media (max-width: 991px) {
   footer {
     padding: 40px;
@@ -372,9 +380,41 @@ h2 {
     justify-content: center;
     padding: 10px;
   }
-
-
 }
+/* Tablet screen */
+@media (max-width: 991px) {
+  #container-1 {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+
+    
+  }
+}
+
+/* Mobile screen */
+
+@media (max-width: 768px) {
+  .container-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+  }
+  .img1,
+  .img2,
+  .img3,
+  .img4 {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   footer .content {
     grid-template-columns: repeat(1, 1fr);
@@ -390,60 +430,5 @@ h2 {
     align-items: center;
     justify-content: center;
     padding: 10px;
-
   }
-
-/* Tablet screen  */
-@media screen and (max-width: 700px) and (min-width: 500px) {
-  #container-1 {
-    width: 500px;
-
-    width: 100%;
-    display: grid;
-    min-height: 700px;
-
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    row-gap: 20px;
-    column-gap: 10px;
-    margin-top: 50px;
-
-    grid-template-areas:
-      "sec-1 sec-1"
-      "main main"
-      "sb-left sb-left"
-      "sb-right sb-right";
-  }
-}
-
-/* Mobile screen */
-/* @media screen and (max-width: 500px) {
-    #container {
-        width: 300px;
-    }
-    /* Tablet screen  */
-@media screen and (max-width: 700px) and (min-width: 500px) {
-  #container-1 {
-    width: 500px;
-
-    width: 100%;
-    display: grid;
-    min-height: 700px;
-
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: auto;
-    row-gap: 20px;
-    column-gap: 10px;
-    margin-top: 50px;
-
-    grid-template-areas:
-      "sec-1"
-      "sec-1"
-      "sec-1"
-      "sec-1"
-      "main"
-      "main"
-      "sb-left"
-      "sb-right";  
-}}
 }
