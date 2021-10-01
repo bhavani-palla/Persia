@@ -192,6 +192,8 @@ footer {
   flex-wrap: wrap;
   flex-direction: column;
   height: auto;
+  align-items: center;
+  align-content: center;
 }
 #map {
   margin: 20px;
@@ -228,38 +230,30 @@ main {
 }
 
 #Email {
-  margin: 10px 30px;
   background-color: #a2791d;
   height: 30px;
   width: 300px;
-  margin-top: 2px;
+  margin-top: 10px;
   border-radius: 2px;
-  border: 1px solid white;
+  border: 1px solid #fff;
 }
 #Name {
-  margin: 10px 30px;
   background-color: #a2791d;
   height: 30px;
   width: 300px;
-  margin-top: 2px;
+  margin-top: 5px;
   border-radius: 2px;
-  border: 1px solid white;
+  border: 1px solid #fff;
 }
 
-.container-send {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-  margin-left: 30px;
-}
 input[type="submit"] {
   background-color: #a2791d;
-  height: 40px;
-  width: 80px;
-  margin-top: 80px;
-  margin-right: 130px;
+  height: 30px;
+  width: 300px;
+  margin-top: 10px;
   border-radius: 2;
   border: 1px solid white;
+  color: #fff;
 }
 
 textarea {
@@ -269,6 +263,7 @@ textarea {
   border: 1px solid white;
   background-color: #a2791d;
   border-radius: 2px;
+  margin-top: 10px;
 }
 
 footer {
@@ -277,7 +272,7 @@ footer {
   height: auto;
   padding: 50px 100px;
   background-color: black;
-  color: var(--menu-color);
+  color:  #a2791d;
 }
 footer .content {
   width: 100%;
@@ -288,7 +283,7 @@ footer .content {
 }
 footer .content h2 {
   position: relative;
-
+  color: #fff;
   font-weight: 500;
   margin: 10px;
 }
@@ -307,7 +302,7 @@ footer .content .aboutus p {
 
 h2 {
   text-align: center;
-  color: #fff;
+  color:#a2791d
 }
 
 
