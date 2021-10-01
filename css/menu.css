@@ -8,6 +8,7 @@
     align-items: center;
     background-color:black;
     color: white;
+    font-size: 25px;;
 }
 
 .brand-img img {
@@ -17,7 +18,7 @@
 
 .navbar-links {
     height: 100%;
-    font-weight:bolder;
+    
 }
 
 .navbar-links ul {
