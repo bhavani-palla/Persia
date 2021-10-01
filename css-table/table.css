@@ -274,6 +274,8 @@ input[type=submit]:hover {
 
 }
  @media (max-width: 768px) {
+
+
   .container{
     width: 100%;
     margin: 100px auto;
@@ -285,7 +287,14 @@ input[type=submit]:hover {
     row-gap: 10px;
     column-gap: 10px;
   }
-  
+  h3{
+    color: #a2791d;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    grid-column:3/5 ;
+    text-align: center;
+    padding-bottom: 5px;
+  }
   .image-1{
     display: none;
     padding-left: 10%;
