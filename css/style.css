@@ -1,77 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
 
 :root {
-    
-    --primary-color: rgba(13, 110, 139, 0.4);
-    --overlay-color: rgba(24, 39, 51, 0.85);
-    --menu-speed: 0.75s;
-    --menu-color: #a2791d;
-    
-
+  --primary-color: rgba(13, 110, 139, 0.4);
+  --overlay-color: rgba(24, 39, 51, 0.85);
+  --menu-speed: 0.75s;
+  --menu-color: #a2791d;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: sans-serif 'Times New Roman', Times, serif;
-    line-height: 1.4;
+  font-family: sans-serif "Times New Roman", Times, serif;
+  line-height: 1.4;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
-
 
 /* body text starts here*/
 
-
-  .showcase {
-    background-color: black;
-    color: #fff;
-    /*height: 180vh;*/
-    position: relative;
-
+.showcase {
+  background-color: black;
+  color: #fff;
+  /*height: 180vh;*/
+  position: relative;
 }
-
-
 
 .showcase .showcase-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 90%;
 }
 
-.showcase h1{
-    font-size: 4rem;
-    color:var(--menu-color)
-
+.showcase h1 {
+  font-size: 4rem;
+  color: var(--menu-color);
 }
 
 .showcase p {
-    font-size: 1.3rem;
-
+  font-size: 1.3rem;
 }
 
-
- @media (max-width:768px) {
-
-     .showcase {       
-         height: 450vh;
-        }
-
-    .showcase .showcase-inner {
-        height: 100%;
-    }
-
-
-}
 

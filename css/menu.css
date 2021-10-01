@@ -23,8 +23,9 @@
 
 .navbar-links ul {
     display: flex;
-    margin: 0;
+    margin-right: 5rem;
     padding: 0;
+
 }
 
 .navbar-links li {
